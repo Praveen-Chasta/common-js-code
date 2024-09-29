@@ -334,7 +334,7 @@
 
 // 20. Write a JavaScript program to find duplicate values in a JavaScript array.
 
-let array = [1, 2, 3, 4, 2, 5, 3, 6, 1];
+// let array = [1, 2, 3, 4, 2, 5, 3, 6, 1];
 // let arr = []
 // let object = {}
 
@@ -459,3 +459,175 @@ let array = [1, 2, 3, 4, 2, 5, 3, 6, 1];
 // }
 
 // console.log(arr)
+
+
+//  31. Write a JavaScript function to remove a specific element from an array.
+
+// let array = [1,2,3,4,5]
+
+// function removeElement(arr, num){
+     
+//      let a = arr.filter((item) => item !== num)
+//      return a
+// }
+
+// console.log(removeElement(array, 5))
+
+// 32. Write a JavaScript function to find an array containing a specific element
+
+// let array = [1,2,3,4,5]
+
+// function findElement(arr, num){
+     
+     
+//      return arr.includes(num)
+// }
+
+// console.log(findElement(array, 5))
+
+// 34. Write a JavaScript function to get the nth largest element from an unsorted array.
+
+// let array = [ 43, 56, 23, 89, 88, 90, 99, 652]
+// let n = 4
+
+// function nThLargestNumber(arr, n){
+//    let max = arr[0]
+//    let a = []
+
+   
+//    for(let i = 0; i < n; i++){
+//         max = Math.max(...arr)
+//         let index = arr.indexOf(max)
+//         arr.splice(index, 1)
+//    }
+
+//    return max
+// }
+
+// console.log(nThLargestNumber(array, n))
+
+
+// 35. Write a JavaScript function to create a specified number of elements with a pre-filled numeric value array
+
+// function numbers(a, b){
+    
+//     let ab = []
+
+//     for(let i = 0; i <= a; i++){
+//         ab.push(b)
+//     }
+//     return ab
+// }
+
+// console.log(numbers(4, 11))
+
+// 38. Write a JavaScript function to move an array element from one position to another.
+
+// function move(arr, fromIndex, toIndex) {
+//     if (fromIndex >= arr.length || toIndex >= arr.length || fromIndex < 0 || toIndex < 0) {
+//         return "Invalid index";
+//     }
+  
+//     let index = arr[fromIndex]
+    
+//     arr.splice(fromIndex, 1)
+//     arr.splice(toIndex, 0, index)
+   
+//     return arr
+// }
+
+
+// console.log(move([10, 20, 30, 40, 50], 0, 2)); 
+
+// 40. Write a JavaScript function to generate an array of integer numbers, increasing one from the starting position, of a specified length.
+
+// function loopValue(a, b){
+
+//    let arr = [] 
+//    let count = 0
+
+//    for(let i = a; i <= b; i++){
+//         arr.push(i)
+//         count ++
+//         if(count === b ){
+//             break
+//         }
+//    }
+//   return arr
+// }
+
+// console.log(loopValue(-6, 4))
+
+
+// 41. Write a JavaScript function to generate an array between two integers of 1 step length.
+
+// function loopValue(a, b){
+
+//    let arr = [] 
+//    let count = 0
+
+//    for(let i = a; i <= b; i++){
+//         arr.push(i)
+//    }
+//   return arr
+// }
+
+// console.log(loopValue(4, 7))
+
+// 45. Write a JavaScript program to find all the unique values in a set of numbers.
+
+// function removeDuplicate(arr){
+   
+//     let a = []
+
+//     for(let i = 0; i < arr.length; i++){
+//         if(!a.includes(arr[i])){
+//             a.push(arr[i])
+//         }
+//     }
+//    return a
+// }
+
+// console.log(removeDuplicate([1, -2, -2, 3, 4, -5, -6, -5]))
+
+
+// // 48. Write a JavaScript program that takes an array of integers and returns false if every number is not prime. Otherwise, return true.
+
+// let array1 = [2, 3, 5, 7]
+// let array2 = [4, 6, 8, 9]
+
+// function primeNumbers(a){
+   
+//     for( n of a){
+//         if(n === 1 || (n > 2 && n % 2 === 0)){
+//             return false
+//         }
+//     }
+//     return true
+// }
+
+// console.log(primeNumbers(array1))
+
+// console.log(primeNumbers(array2))
+
+
+// 49. Write a JavaScript program that takes an array of numbers and returns the third smallest number.
+
+let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,6,17,108,19]
+let n = 2;
+
+function nThLargestNumber(arr, n){
+
+    let max = arr[0]
+
+    for(let i = 0 ; i < n; i++){
+        max = Math.max(...arr)
+        let index = arr.indexOf(max)
+        arr.splice(index, 1)
+    }
+
+    return max
+
+}
+
+console.log(nThLargestNumber(array, n))
