@@ -613,21 +613,206 @@
 
 // 49. Write a JavaScript program that takes an array of numbers and returns the third smallest number.
 
-let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,6,17,108,19]
-let n = 2;
+// let array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,1,6,17,108,19]
+// let n = 2;
 
-function nThLargestNumber(arr, n){
+// function nThLargestNumber(arr, n){
 
-    let max = arr[0]
+//     let max = arr[0]
 
-    for(let i = 0 ; i < n; i++){
-        max = Math.max(...arr)
-        let index = arr.indexOf(max)
-        arr.splice(index, 1)
-    }
+//     for(let i = 0 ; i < n; i++){
+//         max = Math.max(...arr)
+//         let index = arr.indexOf(max)
+//         arr.splice(index, 1)
+//     }
 
-    return max
+//     return max
 
-}
+// }
 
-console.log(nThLargestNumber(array, n))
+// console.log(nThLargestNumber(array, n))
+
+
+// 52. Write a JavaScript program to get all the indexes where NaN is found in a given array of numbers and NaN.
+
+// let array = [2, 4, NaN, 16, 32, NaN]
+
+// function findArray(arr){
+
+//     let a = []
+
+//     for(let i = 0; i < arr.length; i++){
+//         if (Number.isNaN(arr[i])){
+//             a.push(i)
+//         }
+//     }
+
+//     return a
+
+// }
+
+// console.log(findArray(array))
+
+// let arr = [1,2,8,4,5]
+
+// let b = arr.sort((c, d) => d - c)
+
+// console.log(b)
+
+// 1. 
+
+// let employees_data = [
+//     {
+//         employee_id: 1,
+//         employee_name: "Aman",
+//     },
+//     {
+//         employee_id: 2,
+//         employee_name: "Bhargava",
+//     },
+//     {
+//         employee_id: 3,
+//         employee_name: "Chaitanya",
+//     },
+// ];
+
+// let modifiedData = employees_data.map(obj => {
+//     if(obj.employee_id == 1){
+//         return {...obj, employee_name : "Praveen"}
+//     }
+//     return obj
+// })
+
+// console.log(modifiedData)
+
+
+// 2 Reverse Array
+
+// let array = [1,2,3,4,5]
+
+// let b = []
+
+// for(let i = array.length - 1; i >= 0; i--){
+//       b.push(array[i])
+// }
+
+// console.log(b)
+
+
+// 3 convert them in single array
+
+// let array = [[1, 2], [3, 4], [5, 6]];
+
+// let b = []
+
+// for(let i = 0; i < array.length; i++){
+//     for(let j = 0; j < array[i].length; j++)[
+//         b.push(array[i][j])
+//     ]
+// }
+
+// console.log(b)
+
+
+// 4 Given an array, the task is to cyclically rotate the array clockwise by one time.
+
+// let array = [1,2,3,4,5]
+// let b = 2
+
+// function rotateElement(array, n){
+
+//     for(let i = 0; i < n; i++){
+//         let c = array.pop();
+//         array.unshift(c)
+//     }
+//    return array
+// }
+
+// console.log(rotateElement(array, b))
+
+// function rotateElement(array, n){
+
+//     for(let i = 0; i < n; i++){
+//         let lastEle = array[array.length - 1]
+
+//         for(let j = array.length - 1; j > 0; j--){
+//             array[j] = array[j - 1]
+//         }
+//         array[0] = lastEle
+//     }
+
+//     return array
+// }
+
+// console.log(rotateElement(array, b))
+
+// 5 occurance
+
+// let array = [1, 1, 2, 2, 2, 2, 3,3,3,3,3,3,3]
+// let b = 2
+// let obj = {}
+
+// function findOccurance(arr, n){
+//     for(let i = 0; i < array.length; i++){
+//         let val = arr[i]
+//         if(obj[val]){
+//             obj[val] ++
+//         }
+//         else{
+//             obj[val] = 1
+//         }
+//     }
+
+//     return obj[n] || 0
+// }
+
+// console.log(findOccurance(array, b))
+
+
+// // 6. Max Occurance 
+
+
+// // 
+
+// let arr = [1, 1, 2, 2, 2, 2, 3,3,3,3,3,3,3]
+// let d = 2
+// let obje = {}
+
+// function findMaxOccurance(arr, n){
+//     for(let i = 0; i < arr.length; i++){
+//         let val = arr[i]
+//         if(obje[val]){
+//             obje[val] ++
+//         }
+//         else{
+//             obje[val] = 1
+//         }
+//     }
+
+//     let maxCount = 0;
+//     let maxElement = null;
+
+//     for (let key in obje) {
+//         if (obje[key] > maxCount) {
+//             maxCount = obje[key];
+//             maxElement = key;
+//         }
+//     }
+
+//     // Return the element with max occurrence and its count
+//     return { element: maxElement, count: maxCount };
+
+// }
+
+// console.log(findMaxOccurance(arr, d))
+
+
+// 7. An array contains both positive and negative numbers in random order. Rearrange the array elements so that all negative numbers appear before all positive numbers.
+
+// let array = [-12, 11, -13, -5, 6, -7, 5, -3, -6]
+
+// function filterNegative(arr){
+//     return arr.sort()
+// }
+
+// console.log(filterNegative(array))
